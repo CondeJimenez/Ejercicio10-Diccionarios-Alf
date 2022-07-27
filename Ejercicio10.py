@@ -6,11 +6,11 @@
 #  donde preferente tendrá el valor True si se trata de un cliente preferente.
 # 
 #  El programa debe preguntar al usuario por una opción del siguiente menú:
-#   (1) Añadir cliente, 
+#   (1) Añadir cliente,
 #   (2) Eliminar cliente, 
 #   (3) Mostrar cliente, 
 #   (4) Listar todos los clientes, 
-#   (5) Listar clientes preferentes, 
+#   (5) Listar clientes preferentes,
 #   (6) Terminar.
 #
 #  En función de la opción elegida el programa tendrá que hacer lo siguiente:
