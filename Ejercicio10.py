@@ -43,15 +43,15 @@ while menu != 6:
     if menu == 1:
         print("Añadir Cliente")
         nif = input("Agrega tu NIF: ")
-        nombre = input("Escribe tu nombre: ")
-        direccion = input("Escribe tu direccion: ")
+        nombre = input("Cual es su nombre: ")
+        direccion = input("Escribe la  direccion: ")
         telefono = input("Escribe un telefono: ")
-        correo = input("Registra un correo: ")
+        correo = input("¿Cual es su correo?: ")
         preferente = input("¿Es cliente preferente?(Si/No): ")
         datos = {"Nombre": nombre, "Direccion": direccion, "Telefono": telefono, "Correo": correo, "Preferente": preferente == "Si"}
         cliente[nif] = datos
     elif menu == 2:
         print("Eliminar Cliente")
-        nif = input("Cual es tu NIF: ")
+        nif = input("Cual es el NIF: ")
         if nif in cliente:
             del cliente[nif]
