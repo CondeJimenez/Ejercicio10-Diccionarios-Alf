@@ -22,49 +22,7 @@
 #   6.Terminar el programa.
 
 # cliente = {"NIF": {"Nombre":"Kevin Conde", "Direccion": "Cerro del potosi 1241", "Telefono": 8121523309, "Correo": "conde.jimenez@hotmail.com", "Preferente":True}}
-<<<<<<< HEAD
-nif = {"Num NIF": 0}
-cliente = { 0 : {"Nombre": "", "Direccion": "", "Telefono": 0, "Correo": "", "Preferente":False}}
-menu = 0
-
-print("Elige una de las siguientes opciones.")
-print("""
-Presiona 1 para Añadir Cliente.
-Presiona 2 para Eliminar Cliente.
-Presiona 3 para Mostrar Cliente.
-Presiona 4 para Listar todos los Clientes.
-Presiona 5 para Listar Clientes Preferentes.
-Presiona 6 para Terminar. 
-""")
-print()
-
-while menu != 6:
-    menu = int(input("Elige una opcion: "))
-    print()
-    if menu == 1:
-        print("Añadir Cliente")
-        for clave, valor in cliente["NIF"].items():
-            valor = input(f"Agrega tu {clave}: ")
-            cliente["NIF"][clave] = valor
-            if valor == "Si":
-                cliente["NIF"]["Preferente"] = True
-            else:
-                cliente["NIF"]["Preferente"] = False
-        print()
-    elif menu == 2:
-        print("Eliminar Cliente")
-        valor = input("Ingresa el nombre del cliente")
-        if valor in cliente.values():
-            cliente.clear(valor)
-        print()
-    elif menu == 3:
-        print("Mostrar Cliente")
-         = input("Escribe el nombre del cliente: ")
-        print(cliente["NIF"][valor])
-print(cliente)
-=======
 cliente = {}
-datos = {}
 # datos = {"Nombre": "", "Direccion": "", "Telefono": 0, "Correo": "", "Preferente":False}
 menu = 0
 
@@ -94,9 +52,3 @@ while menu != 6:
         cliente[nif] = datos
     print(datos)
     print(cliente)
-
-
-
-
-
->>>>>>> solucion
