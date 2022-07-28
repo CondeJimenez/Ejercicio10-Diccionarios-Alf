@@ -50,5 +50,8 @@ while menu != 6:
         preferente = input("¿Es cliente preferente?(Si/No): ")
         datos = {"Nombre": nombre, "Direccion": direccion, "Telefono": telefono, "Correo": correo, "Preferente": preferente == "Si"}
         cliente[nif] = datos
-    print(datos)
-    print(cliente)
+    elif menu == 2:
+        print("Eliminar Cliente")
+        nif = input("Cual es tu NIF: ")
+        if nif in cliente:
+            del cliente[nif]
