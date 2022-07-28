@@ -21,21 +21,40 @@
 #   5.Mostrar la lista de clientes preferentes de la base de datos con su NIF y nombre.
 #   6.Terminar el programa.
 
-cliente = {"NIF": {"Nombre":"Kevin Conde", "Direccion": "Cerro del potosi 1241", "Telefono": 8121523309, "Correo": "conde.jimenez@hotmail.com", "Preferente":True}}
+# cliente = {"NIF": {"Nombre":"Kevin Conde", "Direccion": "Cerro del potosi 1241", "Telefono": 8121523309, "Correo": "conde.jimenez@hotmail.com", "Preferente":True}}
 cliente = {}
-terminar = 0
+datos = {}
+# datos = {"Nombre": "", "Direccion": "", "Telefono": 0, "Correo": "", "Preferente":False}
+menu = 0
 
-print("Elige una de las siguientes opciones.")
-print("""
-Presiona 1 para Añadir Cliente.
-Presiona 2 para Eliminar Cliente.
-Presiona 3 para Mostrar Cliente.
-Presiona 4 para Listar todos los Clientes.
-Presiona 5 para Listar Clientes Preferentes.
-Presiona 6 para Terminar. 
-""")
-print()
-
-while terminar != 6:
+while menu != 6:
+    print("Elige una de las siguientes opciones.")
+    print("""
+    Presiona 1 para Añadir Cliente.
+    Presiona 2 para Eliminar Cliente.
+    Presiona 3 para Mostrar Cliente.
+    Presiona 4 para Listar todos los Clientes.
+    Presiona 5 para Listar Clientes Preferentes.
+    Presiona 6 para Terminar. 
+    """)
+    print()
     menu = int(input("Elige una opcion: "))
+    print()
+
     if menu == 1:
+        print("Añadir Cliente")
+        nif = input("Agrega tu NIF: ")
+        nombre = input("Escribe tu nombre: ")
+        direccion = input("Escribe tu direccion: ")
+        telefono = input("Escribe un telefono: ")
+        correo = input("Registra un correo: ")
+        preferente = input("¿Es cliente preferente?(Si/No): ")
+        datos = {"Nombre": nombre, "Direccion": direccion, "Telefono": telefono, "Correo": correo, "Preferente": preferente == "Si"}
+        cliente[nif] = datos
+    print(datos)
+    print(cliente)
+
+
+
+
+
