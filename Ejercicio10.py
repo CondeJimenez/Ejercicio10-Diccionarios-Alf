@@ -23,10 +23,12 @@
 
 # cliente = {"NIF": {"Nombre":"Kevin Conde", "Direccion": "Cerro del potosi 1241", "Telefono": 8121523309, "Correo": "conde.jimenez@hotmail.com", "Preferente":True}}
 cliente = {}
+datos = {}
 # datos = {"Nombre": "", "Direccion": "", "Telefono": 0, "Correo": "", "Preferente":False}
 menu = 0
 
 while menu != 6:
+    print()
     print("Elige una de las siguientes opciones.")
     print("""
     Presiona 1 para Añadir Cliente.
@@ -50,8 +52,29 @@ while menu != 6:
         preferente = input("¿Es cliente preferente?(Si/No): ")
         datos = {"Nombre": nombre, "Direccion": direccion, "Telefono": telefono, "Correo": correo, "Preferente": preferente == "Si"}
         cliente[nif] = datos
+
     elif menu == 2:
         print("Eliminar Cliente")
         nif = input("Cual es el NIF: ")
         if nif in cliente:
+            print(f"Se elimino el cliente {cliente[nif]}")
             del cliente[nif]
+        else:
+            print("El cliente no existe")
+        
+    elif menu == 3:
+        print("Mostrar Cliente")
+        nif = input("Escribe el NIF del Cliente: ")
+        for clave, valor in cliente[nif].items():
+            print(f"{clave}: {valor}")
+        
+    elif menu == 4:
+        print("Listar Clientes")
+        for clave, valor in cliente.items():
+            print(f"{cliente}: {valor}")
+        
+    elif menu == 5:
+        print("Listar Clientes Preferentes")
+        if cliente[nif]["Preferente"] == True:
+            for clave, valor in cliente[nif].items():
+                print(f"{clave}: {valor}")
