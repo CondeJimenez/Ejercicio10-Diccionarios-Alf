@@ -78,6 +78,9 @@ while menu != 6:
         
     elif menu == 5:
         print("Listar Clientes Preferentes")
-        if cliente[nif]["Preferente"] == True:
-            for clave, valor in cliente[nif].items():
-                print(f"{clave}: {valor}")
+        for clave in cliente:
+            if cliente[clave]["Preferente"] == True:
+                print(f"NIF:{clave}")
+                for claveCliente, valorCliente in cliente[clave].items():
+                    print(f"{claveCliente}: {valorCliente}")
+                print()
